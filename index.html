@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legacy Estate UAE | Abu Dhabi Real Estate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1B2C;
+    --ink-2:#132538;
+    --sand:#C9A567;
+    --sand-light:#E6D3A8;
+    --paper:#F6F2EA;
+    --teal:#123C3C;
+    --white:#FFFFFF;
+    --muted:#5B6472;
+    --line: rgba(201,165,103,0.25);
+    --radius: 2px;
+    --maxw: 1240px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  html[dir="rtl"] body{ font-family:'Cairo','Tajawal', sans-serif; }
+  h1,h2,h3,.serif{ font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em; }
+  html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] .serif{ font-family:'Tajawal', sans-serif; font-weight:800; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:0.18em; font-size:12px; font-weight:700;
+    color:var(--sand); display:flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .eyebrow::before{content:""; width:28px; height:1px; background:var(--sand); display:inline-block;}
+  html[dir="rtl"] .eyebrow::before{ order:2; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 28px; border-radius:var(--radius); font-weight:700; font-size:14px;
+    letter-spacing:0.03em; cursor:pointer; border:1px solid transparent; transition:.25s ease;
+  }
+  .btn-primary{ background:var(--sand); color:var(--ink); }
+  .btn-primary:hover{ background:#DAB877; }
+  .btn-outline{ border-color:rgba(255,255,255,0.35); color:var(--white); }
+  .btn-outline:hover{ background:rgba(255,255,255,0.08); }
+  .btn-dark{ background:var(--ink); color:var(--white); }
+  .btn-dark:hover{ background:var(--ink-2); }
+  .btn-block{ width:100%; }
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:60; background:rgba(14,27,44,0.92); backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(201,165,103,0.18);
+  }
+  .topbar{ background:var(--sand); color:var(--ink); font-size:12px; font-weight:700; }
+  .topbar .wrap{ display:flex; justify-content:space-between; align-items:center; padding:8px 28px; letter-spacing:.03em;}
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; color:var(--white);}
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand .mark{ width:38px; height:38px; }
+  .brand-text{ line-height:1.1; }
+  .brand-text b{ font-family:'Fraunces', serif; font-size:19px; letter-spacing:0.02em; display:block;}
+  html[dir="rtl"] .brand-text b{ font-family:'Tajawal', sans-serif; font-weight:800;}
+  .brand-text span{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--sand);}
+  nav.links{ display:flex; gap:30px; font-size:14px; font-weight:600; }
+  nav.links a{ opacity:.85; transition:.2s; position:relative;}
+  nav.links a:hover{ opacity:1; color:var(--sand);}
+  .nav-right{ display:flex; align-items:center; gap:16px; }
+  .lang-toggle{
+    display:flex; border:1px solid rgba(255,255,255,0.3); border-radius:20px; overflow:hidden; font-size:12px; font-weight:800;
+  }
+  .lang-toggle button{ padding:6px 14px; background:transparent; color:var(--white); border:none; cursor:pointer; }
+  .lang-toggle button.active{ background:var(--sand); color:var(--ink); }
+  .menu-btn{ display:none; background:none; border:none; color:var(--white); font-size:22px; cursor:pointer; }
+
+  @media(max-width:900px){
+    nav.links{ display:none; }
+    .menu-btn{ display:block; }
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative; background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); color:var(--white);
+    overflow:hidden; padding-bottom:120px;
+  }
+  .hero-inner{ padding:90px 28px 40px; display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center; max-width:var(--maxw); margin:0 auto;}
+  @media(max-width:900px){ .hero-inner{ grid-template-columns:1fr; padding-top:50px;} }
+  .hero h1{ font-size:clamp(34px,5vw,58px); line-height:1.05; margin:0 0 20px; color:var(--white);}
+  .hero h1 em{ font-style:normal; color:var(--sand);}
+  .hero p.lead{ font-size:17px; line-height:1.7; color:rgba(255,255,255,0.75); max-width:480px; margin:0 0 32px;}
+  .hero-cta{ display:flex; gap:14px; flex-wrap:wrap; }
+  .stat-row{ display:flex; gap:36px; margin-top:52px; flex-wrap:wrap;}
+  .stat-row div b{ display:block; font-family:'Fraunces',serif; font-size:28px; color:var(--sand);}
+  html[dir="rtl"] .stat-row div b{ font-family:'Tajawal',sans-serif; }
+  .stat-row div span{ font-size:12px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:.08em;}
+
+  /* skyline signature svg */
+  .skyline-wrap{ position:relative; }
+  .skyline-wrap svg{ width:100%; height:auto; }
+
+  /* search card */
+  .search-card{
+    position:relative; z-index:5; background:var(--white); margin:-70px auto 0; max-width:calc(var(--maxw) - 56px);
+    border-radius:var(--radius); box-shadow:0 30px 60px rgba(14,27,44,0.25); padding:26px;
+  }
+  .search-tabs{ display:flex; gap:8px; margin-bottom:18px; border-bottom:1px solid #eee; }
+  .search-tabs button{
+    background:none; border:none; padding:10px 18px; font-weight:700; font-size:13px; letter-spacing:.03em;
+    color:var(--muted); cursor:pointer; border-bottom:2px solid transparent; text-transform:uppercase;
+  }
+  .search-tabs button.active{ color:var(--ink); border-color:var(--sand); }
+  .search-grid{ display:grid; grid-template-columns:repeat(5,1fr) auto; gap:14px; align-items:end;}
+  @media(max-width:1000px){ .search-grid{ grid-template-columns:repeat(2,1fr); } }
+  .field label{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:6px; font-weight:700;}
+  .field select, .field input{
+    width:100%; padding:12px 10px; border:1px solid #E3DFD4; border-radius:var(--radius); font-size:14px; background:#FBFAF7; color:var(--ink);
+    font-family:inherit;
+  }
+  .search-grid .btn{ height:44px; white-space:nowrap;}
+
+  section{ padding:96px 0; }
+  .section-head{ max-width:640px; margin-bottom:56px;}
+  .section-head h2{ font-size:clamp(28px,3.4vw,42px); margin:0 0 16px;}
+  .section-head p{ color:var(--muted); font-size:16px; line-height:1.7;}
+  .center{ text-align:center; margin-left:auto; margin-right:auto; }
+
+  /* services */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line);}
+  @media(max-width:900px){ .services-grid{ grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .services-grid{ grid-template-columns:1fr;} }
+  .service-card{ background:var(--paper); padding:38px 30px; transition:.25s; }
+  .service-card:hover{ background:var(--ink); color:var(--white); }
+  .service-card:hover .service-num{ color:var(--sand); }
+  .service-card:hover p{ color:rgba(255,255,255,0.7); }
+  .service-icon{ width:40px; height:40px; margin-bottom:22px; color:var(--sand);}
+  .service-card h3{ font-size:20px; margin:0 0 10px;}
+  .service-card p{ font-size:14px; color:var(--muted); line-height:1.6; margin:0;}
+
+  /* properties */
+  .prop-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  @media(max-width:900px){ .prop-grid{ grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .prop-grid{ grid-template-columns:1fr;} }
+  .prop-card{ background:var(--white); border:1px solid var(--line); overflow:hidden; transition:.25s;}
+  .prop-card:hover{ box-shadow:0 20px 40px rgba(14,27,44,0.12); transform:translateY(-4px);}
+  .prop-media{ position:relative; height:200px; }
+  .prop-tag{ position:absolute; top:14px; inset-inline-start:14px; background:var(--sand); color:var(--ink); font-size:11px; font-weight:800; padding:5px 10px; text-transform:uppercase; letter-spacing:.05em;}
+  .prop-price{ position:absolute; bottom:14px; inset-inline-start:14px; background:rgba(14,27,44,0.85); color:var(--white); padding:6px 12px; font-weight:700; font-size:14px;}
+  .prop-body{ padding:20px; }
+  .prop-body h3{ font-size:18px; margin:0 0 6px; font-weight:700; font-family:'Manrope',sans-serif;}
+  html[dir="rtl"] .prop-body h3{ font-family:'Cairo',sans-serif; }
+  .prop-loc{ font-size:13px; color:var(--muted); margin-bottom:14px; display:flex; align-items:center; gap:6px;}
+  .prop-meta{ display:flex; gap:16px; font-size:13px; color:var(--ink); border-top:1px solid #eee; padding-top:14px;}
+  .prop-meta span{ display:flex; align-items:center; gap:6px; color:var(--muted); }
+  .prop-amen{ display:flex; flex-wrap:wrap; gap:6px; margin-top:12px;}
+  .prop-amen span{ font-size:11px; background:var(--paper); padding:4px 9px; border-radius:20px; color:var(--muted);}
+
+  /* AI finder */
+  .ai-section{ background:var(--ink); color:var(--white); position:relative; overflow:hidden;}
+  .ai-inner{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  @media(max-width:900px){ .ai-inner{ grid-template-columns:1fr; } }
+  .ai-inner .section-head p{ color:rgba(255,255,255,0.65);}
+  .ai-inner .section-head h2{ color:var(--white);}
+  .ai-card{ background:rgba(255,255,255,0.05); border:1px solid rgba(201,165,103,0.3); padding:30px; border-radius:var(--radius);}
+  .ai-card textarea{ width:100%; min-height:90px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.2); border-radius:var(--radius); color:var(--white); padding:14px; font-family:inherit; font-size:14px; resize:vertical;}
+  .ai-chips{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+  .ai-chips span{ font-size:12px; border:1px solid rgba(255,255,255,0.25); padding:6px 12px; border-radius:20px; cursor:pointer; color:rgba(255,255,255,0.8);}
+  .ai-chips span:hover{ border-color:var(--sand); color:var(--sand);}
+  .ai-result{ margin-top:16px; font-size:13px; color:rgba(255,255,255,0.7); border-top:1px dashed rgba(255,255,255,0.2); padding-top:16px; display:none; white-space:pre-wrap; line-height:1.6;}
+
+  /* why us */
+  .why-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px;}
+  @media(max-width:900px){ .why-grid{ grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .why-grid{ grid-template-columns:1fr;} }
+  .why-card{ border-top:2px solid var(--sand); padding-top:18px;}
+  .why-card h3{ font-size:17px; margin:0 0 8px;}
+  .why-card p{ font-size:14px; color:var(--muted); line-height:1.6; margin:0;}
+
+  /* team */
+  .team-band{ background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .team-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:26px;}
+  @media(max-width:900px){ .team-grid{ grid-template-columns:1fr 1fr;} }
+  .team-card{ text-align:center; }
+  .team-avatar{ width:100%; aspect-ratio:1; background:var(--paper); border:1px solid var(--line); margin-bottom:14px; display:flex; align-items:center; justify-content:center;}
+  .team-avatar svg{ width:46%; color:var(--sand);}
+  .team-card h4{ margin:0 0 4px; font-size:15px;}
+  .team-card span{ font-size:12px; color:var(--muted);}
+
+  /* contact / form */
+  .contact-section{ background:var(--paper); }
+  .contact-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px;}
+  @media(max-width:900px){ .contact-grid{ grid-template-columns:1fr;} }
+  .contact-info{ background:var(--ink); color:var(--white); padding:44px; border-radius:var(--radius); height:fit-content;}
+  .contact-info h3{ font-size:22px; margin:0 0 16px; color:var(--white);}
+  .contact-info p{ color:rgba(255,255,255,0.7); line-height:1.7; font-size:14px; margin-bottom:28px;}
+  .contact-line{ display:flex; gap:12px; align-items:flex-start; margin-bottom:20px; font-size:14px;}
+  .contact-line svg{ width:18px; height:18px; color:var(--sand); flex:none; margin-top:2px;}
+  .form-card{ background:var(--white); padding:40px; border:1px solid var(--line); border-radius:var(--radius);}
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
+  @media(max-width:560px){ .form-row{ grid-template-columns:1fr; } }
+  .form-group label{ display:block; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px; color:var(--ink);}
+  .form-group input, .form-group select, .form-group textarea{
+    width:100%; padding:13px 12px; border:1px solid #DDD7C8; border-radius:var(--radius); font-size:14px; font-family:inherit; background:#FBFAF7;
+  }
+  .form-group textarea{ min-height:100px; resize:vertical; }
+  .phone-row{ display:flex; gap:10px; }
+  .phone-row select{ flex:0 0 130px; }
+  .check-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;}
+  @media(max-width:560px){ .check-grid{ grid-template-columns:1fr;} }
+  .check-item{ display:flex; align-items:center; gap:8px; font-size:13px; border:1px solid #DDD7C8; padding:11px 12px; border-radius:var(--radius); cursor:pointer; background:#FBFAF7;}
+  .check-item input{ accent-color:var(--sand); width:16px; height:16px;}
+  .form-note{ font-size:12px; color:var(--muted); margin-top:10px;}
+  #form-status{ margin-top:14px; font-size:13px; font-weight:700; display:none; padding:12px; border-radius:var(--radius);}
+  #form-status.ok{ display:block; background:#EAF6EE; color:#1D7A3E;}
+  #form-status.err{ display:block; background:#FBEAEA; color:#B3261E;}
+
+  footer{ background:var(--ink); color:rgba(255,255,255,0.6); padding:60px 0 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;}
+  @media(max-width:800px){ .footer-grid{ grid-template-columns:1fr 1fr;} }
+  .footer-grid h4{ color:var(--white); font-size:13px; text-transform:uppercase; letter-spacing:.08em; margin:0 0 18px;}
+  .footer-grid ul{ list-style:none; padding:0; margin:0; }
+  .footer-grid li{ margin-bottom:10px; font-size:14px;}
+  .footer-grid a:hover{ color:var(--sand); }
+  .footer-bottom{ border-top:1px solid rgba(255,255,255,0.1); padding-top:22px; display:flex; justify-content:space-between; font-size:12px; flex-wrap:wrap; gap:10px;}
+
+  /* floating buttons */
+  .fab-col{ position:fixed; bottom:24px; inset-inline-end:24px; display:flex; flex-direction:column; gap:14px; z-index:80;}
+  .fab{ width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 10px 26px rgba(0,0,0,0.25); color:var(--white); border:none;}
+  .fab-wa{ background:#25D366; }
+  .fab-chat{ background:var(--ink); border:2px solid var(--sand);}
+  .fab svg{ width:26px; height:26px; }
+
+  /* chatbot panel */
+  .chat-panel{
+    position:fixed; bottom:96px; inset-inline-end:24px; width:340px; max-width:88vw; height:440px; background:var(--white);
+    border-radius:var(--radius); box-shadow:0 20px 60px rgba(0,0,0,0.3); display:none; flex-direction:column; overflow:hidden; z-index:90; border:1px solid var(--line);
+  }
+  .chat-panel.open{ display:flex; }
+  .chat-head{ background:var(--ink); color:var(--white); padding:16px 18px; display:flex; justify-content:space-between; align-items:center;}
+  .chat-head b{ font-family:'Fraunces',serif; font-size:15px;}
+  html[dir="rtl"] .chat-head b{ font-family:'Tajawal',sans-serif; }
+  .chat-head button{ background:none; border:none; color:var(--white); font-size:18px; cursor:pointer;}
+  .chat-body{ flex:1; padding:16px; overflow-y:auto; font-size:13px; display:flex; flex-direction:column; gap:10px; background:var(--paper);}
+  .msg{ max-width:85%; padding:9px 13px; border-radius:12px; line-height:1.5;}
+  .msg.bot{ background:var(--white); border:1px solid var(--line); align-self:flex-start;}
+  .msg.user{ background:var(--ink); color:var(--white); align-self:flex-end;}
+  html[dir="rtl"] .msg.bot{ align-self:flex-end; }
+  html[dir="rtl"] .msg.user{ align-self:flex-start; }
+  .chat-input{ display:flex; border-top:1px solid var(--line); }
+  .chat-input input{ flex:1; border:none; padding:14px; font-size:13px; font-family:inherit;}
+  .chat-input input:focus{ outline:none; }
+  .chat-input button{ background:var(--sand); border:none; padding:0 18px; cursor:pointer; font-weight:800; color:var(--ink);}
+
+  /* mobile menu */
+  .mobile-menu{ position:fixed; inset:0; background:var(--ink); z-index:100; display:none; flex-direction:column; padding:28px; }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{ color:var(--white); font-size:20px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.08);}
+  .mobile-close{ align-self:flex-end; background:none; border:none; color:var(--white); font-size:26px; cursor:pointer;}
+
+  [data-i18n]{ }
+  .hide{ display:none !important; }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="topbar">
+  <div class="wrap">
+    <span data-i18n="top_location">Abu Dhabi, United Arab Emirates</span>
+    <span data-i18n="top_tag">Trusted Real Estate Advisory Since Day One</span>
+  </div>
+</div>
+
+<header>
+  <div class="nav wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 48 48" fill="none">
+        <rect width="48" height="48" rx="2" fill="#C9A567"/>
+        <path d="M24 8L38 20V40H10V20L24 8Z" stroke="#0E1B2C" stroke-width="2" fill="none"/>
+        <path d="M20 40V28H28V40" stroke="#0E1B2C" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="brand-text">
+        <b>Legacy Estate</b>
+        <span data-i18n="brand_sub">UAE</span>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#home" data-i18n="nav_home">Home</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#properties" data-i18n="nav_properties">Properties</a>
+      <a href="#ai" data-i18n="nav_ai">AI Finder</a>
+      <a href="#team" data-i18n="nav_team">About</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+        <button id="btn-ar" onclick="setLang('ar')">AR</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 18px; font-size:12px;" data-i18n="nav_cta">Get in Touch</a>
+      <button class="menu-btn" onclick="document.getElementById('mmenu').classList.add('open')">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mmenu">
+  <button class="mobile-close" onclick="document.getElementById('mmenu').classList.remove('open')">&times;</button>
+  <a href="#home" data-i18n="nav_home">Home</a>
+  <a href="#services" data-i18n="nav_services">Services</a>
+  <a href="#properties" data-i18n="nav_properties">Properties</a>
+  <a href="#ai" data-i18n="nav_ai">AI Finder</a>
+  <a href="#team" data-i18n="nav_team">About</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home" style="padding-top:0;">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow" data-i18n="hero_eyebrow">Abu Dhabi &middot; Est. Real Estate Advisory</div>
+      <h1 data-i18n="hero_title">Find your place in <em>Abu Dhabi's</em> skyline</h1>
+      <p class="lead" data-i18n="hero_lead">Legacy Estate UAE guides you through buying, selling and renting property across the Emirates — with local expertise and an AI-powered property finder to match you faster.</p>
+      <div class="hero-cta">
+        <a href="#properties" class="btn btn-primary" data-i18n="hero_cta1">Browse Properties</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">Speak to an Advisor</a>
+      </div>
+      <div class="stat-row">
+        <div><b>12+</b><span data-i18n="stat1">Years in UAE</span></div>
+        <div><b>1,400+</b><span data-i18n="stat2">Properties Closed</span></div>
+        <div><b>7</b><span data-i18n="stat3">Emirates Covered</span></div>
+      </div>
+    </div>
+    <div class="skyline-wrap">
+      <svg viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="470" cy="120" r="90" fill="rgba(201,165,103,0.12)"/>
+        <g stroke="#C9A567" stroke-width="1.4" fill="none" opacity="0.95">
+          <!-- falcon motif -->
+          <path d="M300 90 C260 70 210 80 180 110 C220 100 250 108 275 128 C240 130 205 148 185 178 C225 165 260 165 290 178 C270 195 260 215 265 240 C285 215 305 205 325 205 C345 205 365 215 385 240 C390 215 380 195 360 178 C390 165 425 165 465 178 C445 148 410 130 375 128 C400 108 430 100 470 110 C440 80 390 70 350 90 C335 78 320 78 300 90 Z"/>
+        </g>
+        <!-- towers -->
+        <g fill="#C9A567" opacity="0.9">
+          <rect x="60" y="330" width="26" height="150"/>
+          <rect x="96" y="280" width="20" height="200"/>
+          <polygon points="140,480 140,220 158,180 176,220 176,480"/>
+          <rect x="196" y="350" width="30" height="130"/>
+          <rect x="240" y="300" width="18" height="180"/>
+          <polygon points="285,480 285,150 300,90 315,150 315,480" opacity="1"/>
+          <rect x="345" y="320" width="24" height="160"/>
+          <rect x="390" y="270" width="20" height="210"/>
+          <rect x="430" y="340" width="28" height="140"/>
+          <rect x="475" y="300" width="18" height="180"/>
+          <rect x="510" y="360" width="26" height="120"/>
+        </g>
+        <line x1="20" y1="480" x2="580" y2="480" stroke="#C9A567" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEARCH CARD ================= -->
+<div class="wrap">
+  <div class="search-card" id="search">
+    <div class="search-tabs">
+      <button class="active" data-tab="buy" onclick="setTab('buy',this)" data-i18n="tab_buy">Buy</button>
+      <button data-tab="rent" onclick="setTab('rent',this)" data-i18n="tab_rent">Rent</button>
+      <button data-tab="sell" onclick="setTab('sell',this)" data-i18n="tab_sell">Sell</button>
+    </div>
+    <div class="search-grid">
+      <div class="field">
+        <label data-i18n="f_location">Location</label>
+        <select id="s-location"></select>
+      </div>
+      <div class="field">
+        <label data-i18n="f_type">Property Type</label>
+        <select id="s-type">
+          <option data-i18n="type_apartment" value="apartment">Apartment</option>
+          <option data-i18n="type_villa" value="villa">Villa</option>
+          <option data-i18n="type_townhouse" value="townhouse">Townhouse</option>
+          <option data-i18n="type_penthouse" value="penthouse">Penthouse</option>
+          <option data-i18n="type_office" value="office">Office</option>
+          <option data-i18n="type_land" value="land">Land / Plot</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="f_price">Price Range (AED)</label>
+        <select id="s-price">
+          <option data-i18n="price1" value="0-500000">500 AED &ndash; 500,000</option>
+          <option data-i18n="price2" value="500000-1000000">500,000 &ndash; 1,000,000</option>
+          <option data-i18n="price3" value="1000000-2000000">1M &ndash; 2M</option>
+          <option data-i18n="price4" value="2000000-5000000">2M &ndash; 5M</option>
+          <option data-i18n="price5" value="5000000-10000000">5M &ndash; 10M</option>
+          <option data-i18n="price6" value="10000000+">10M+</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="f_bedrooms">Bedrooms</label>
+        <select id="s-beds">
+          <option data-i18n="bed_studio">Studio</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option data-i18n="bed_5plus">5+</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="f_size">Size (sq ft)</label>
+        <select id="s-size">
+          <option data-i18n="size1" value="0-800">Under 800</option>
+          <option data-i18n="size2" value="800-1500">800 &ndash; 1,500</option>
+          <option data-i18n="size3" value="1500-3000">1,500 &ndash; 3,000</option>
+          <option data-i18n="size4" value="3000-6000">3,000 &ndash; 6,000</option>
+          <option data-i18n="size5" value="6000+">6,000+</option>
+        </select>
+      </div>
+      <button class="btn btn-dark" onclick="runSearch()" data-i18n="f_search">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow center" style="justify-content:center;" data-i18n="serv_eyebrow">What We Do</div>
+      <h2 data-i18n="serv_title">Every real estate service, under one roof</h2>
+      <p data-i18n="serv_lead">From your first search to the final handover, Legacy Estate UAE handles buying, selling, renting and managing property across all seven Emirates.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        <h3 data-i18n="s1_title">Buy a Property</h3>
+        <p data-i18n="s1_desc">Apartments, villas and off-plan units across Abu Dhabi and Dubai, matched to your budget and lifestyle.</p>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg>
+        <h3 data-i18n="s2_title">Sell Your Property</h3>
+        <p data-i18n="s2_desc">Market valuation, professional listing and negotiation support to sell at the right price, faster.</p>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3 data-i18n="s3_title">Rent a Home</h3>
+        <p data-i18n="s3_desc">Short and long-term rentals with transparent contracts, from studios to family villas.</p>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+        <h3 data-i18n="s4_title">List for Rent</h3>
+        <p data-i18n="s4_desc">Get your unit in front of qualified tenants with professional photography and screening.</p>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z"/></svg>
+        <h3 data-i18n="s5_title">Off-Plan &amp; New Developments</h3>
+        <p data-i18n="s5_desc">Early access to launches from Abu Dhabi's leading developers with flexible payment plans.</p>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+        <h3 data-i18n="s6_title">AI Property Finder</h3>
+        <p data-i18n="s6_desc">Describe what you're looking for in plain language and let our AI match you with listings instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROPERTIES ================= -->
+<section id="properties" style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="prop_eyebrow">Featured Listings</div>
+      <h2 data-i18n="prop_title">Handpicked properties in Abu Dhabi</h2>
+      <p data-i18n="prop_lead">A snapshot of current listings. Filter above or contact an advisor for the full portfolio, including off-market units.</p>
+    </div>
+    <div class="prop-grid" id="prop-grid"></div>
+  </div>
+</section>
+
+<!-- ================= AI FINDER ================= -->
+<section id="ai" class="ai-section">
+  <div class="wrap ai-inner">
+    <div>
+      <div class="section-head" style="margin-bottom:26px;">
+        <div class="eyebrow" data-i18n="ai_eyebrow">AI Property Finder</div>
+        <h2 data-i18n="ai_title">Tell us what you need. We'll find the match.</h2>
+        <p data-i18n="ai_lead">Describe your ideal home in your own words — budget, area, number of bedrooms, or lifestyle needs — and our assistant will suggest the closest matches from our current listings.</p>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <span data-i18n="ai_point1">Understands natural language, not just filters</span>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <span data-i18n="ai_point2">Works in English and Arabic</span>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <span data-i18n="ai_point3">Connects you directly with a human advisor after</span>
+      </div>
+    </div>
+    <div class="ai-card">
+      <label style="font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--sand); font-weight:700;" data-i18n="ai_label">Describe your ideal property</label>
+      <textarea id="ai-input" style="margin-top:10px;" placeholder="e.g. 2 bedroom apartment in Al Reem Island, under 1.5M AED, close to a school" data-i18n-ph="ai_placeholder"></textarea>
+      <div class="ai-chips">
+        <span onclick="fillAi(this)" data-i18n="chip1">2BR in Saadiyat under 2M</span>
+        <span onclick="fillAi(this)" data-i18n="chip2">Villa for rent, Khalifa City</span>
+        <span onclick="fillAi(this)" data-i18n="chip3">Studio near Corniche</span>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="askAi()" data-i18n="ai_button">Find Matches</button>
+      <div class="ai-result" id="ai-result"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="why_eyebrow">Why Legacy Estate</div>
+      <h2 data-i18n="why_title">Built on local knowledge, run on modern tools</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3 data-i18n="w1_title">Licensed &amp; Regulated</h3>
+        <p data-i18n="w1_desc">Fully licensed brokerage operating under UAE real estate regulations.</p>
+      </div>
+      <div class="why-card">
+        <h3 data-i18n="w2_title">Bilingual Service</h3>
+        <p data-i18n="w2_desc">Every stage of the journey supported in Arabic and English.</p>
+      </div>
+      <div class="why-card">
+        <h3 data-i18n="w3_title">End-to-End Support</h3>
+        <p data-i18n="w3_desc">From viewings to paperwork, mortgage referrals and handover.</p>
+      </div>
+      <div class="why-card">
+        <h3 data-i18n="w4_title">All 7 Emirates</h3>
+        <p data-i18n="w4_desc">Coverage across Abu Dhabi, Dubai, Sharjah, Ajman, RAK, Fujairah and UAQ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="team-band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="team_eyebrow">Our Advisors</div>
+      <h2 data-i18n="team_title">A team that knows every neighbourhood</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h4 data-i18n="t1_name">Omar Al Suwaidi</h4>
+        <span data-i18n="t1_role">Senior Sales Advisor</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h4 data-i18n="t2_name">Lina Chen</h4>
+        <span data-i18n="t2_role">Leasing Manager</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h4 data-i18n="t3_name">James Whitfield</h4>
+        <span data-i18n="t3_role">Off-Plan Specialist</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h4 data-i18n="t4_name">Fatima Noor</h4>
+        <span data-i18n="t4_role">Client Relations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FORM ================= -->
+<section id="contact" class="contact-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="contact_eyebrow">Get In Touch</div>
+      <h2 data-i18n="contact_title">Tell us what you're looking for</h2>
+      <p data-i18n="contact_lead">Share a few details and one of our advisors will respond with matching options.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-i18n="ci_title">Legacy Estate UAE</h3>
+        <p data-i18n="ci_desc">Our Abu Dhabi office is open Saturday to Thursday. Reach us directly by phone, WhatsApp or email, or use the form.</p>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span data-i18n="ci_address">Corniche Road, Abu Dhabi, United Arab Emirates</span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.95.36 1.88.68 2.78a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.83.55 2.78.68A2 2 0 0122 16.92z"/></svg>
+          <span>+44 7745 431063 (WhatsApp)</span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <span>info@legacyestate.ae</span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span data-i18n="ci_hours">Sat &ndash; Thu, 9:00 &ndash; 19:00</span>
+        </div>
+      </div>
+
+      <form class="form-card" id="lead-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="fm_name">Full Name</label>
+            <input type="text" name="name" required placeholder="" data-i18n-ph="fm_name_ph">
+          </div>
+          <div class="form-group">
+            <label data-i18n="fm_email">Email</label>
+            <input type="email" name="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:18px;">
+          <label data-i18n="fm_phone">Phone Number</label>
+          <div class="phone-row">
+            <select name="country_code" id="country-code"></select>
+            <input type="tel" name="phone" required placeholder="55 123 4567" style="flex:1;">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:10px;">
+          <label data-i18n="fm_intent">I want to</label>
+        </div>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="intent" value="buy"><span data-i18n="intent_buy">Buy a property</span></label>
+          <label class="check-item"><input type="checkbox" name="intent" value="sell"><span data-i18n="intent_sell">Sell a property</span></label>
+          <label class="check-item"><input type="checkbox" name="intent" value="rent"><span data-i18n="intent_rent">Rent a property</span></label>
+          <label class="check-item"><input type="checkbox" name="intent" value="list_rent"><span data-i18n="intent_list_rent">List my property for rent</span></label>
+          <label class="check-item"><input type="checkbox" name="intent" value="list_sale"><span data-i18n="intent_list_sale">List my property for sale</span></label>
+          <label class="check-item"><input type="checkbox" name="intent" value="invest"><span data-i18n="intent_invest">Investment enquiry</span></label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="fm_budget">Budget (AED)</label>
+            <select name="budget" id="budget-select"></select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="fm_location">Preferred Location</label>
+            <select name="location" id="location-select"></select>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:18px;">
+          <label data-i18n="fm_timeline">Whenever You Plan To Buy / Sell</label>
+          <select name="timeline">
+            <option data-i18n="tl1">Immediately</option>
+            <option data-i18n="tl2">Within 1&ndash;3 months</option>
+            <option data-i18n="tl3">Within 3&ndash;6 months</option>
+            <option data-i18n="tl4">Just researching</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom:6px;">
+          <label data-i18n="fm_message">Message</label>
+          <textarea name="message" required placeholder="" data-i18n-ph="fm_message_ph"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:14px;" data-i18n="fm_submit">Submit Enquiry</button>
+        <p class="form-note" data-i18n="fm_note">By submitting, you agree to be contacted by Legacy Estate UAE regarding your enquiry.</p>
+        <div id="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:16px;">
+          <svg class="mark" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="2" fill="#C9A567"/>
+            <path d="M24 8L38 20V40H10V20L24 8Z" stroke="#0E1B2C" stroke-width="2" fill="none"/>
+          </svg>
+          <div class="brand-text"><b style="color:#fff;">Legacy Estate</b><span>UAE</span></div>
+        </div>
+        <p style="font-size:13px; line-height:1.7; max-width:280px;" data-i18n="footer_desc">A licensed real estate advisory based in Abu Dhabi, serving buyers, sellers and tenants across the UAE.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_services">Services</h4>
+        <ul>
+          <li><a href="#services" data-i18n="s1_title">Buy a Property</a></li>
+          <li><a href="#services" data-i18n="s2_title">Sell Your Property</a></li>
+          <li><a href="#services" data-i18n="s3_title">Rent a Home</a></li>
+          <li><a href="#ai" data-i18n="s6_title">AI Property Finder</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_company">Company</h4>
+        <ul>
+          <li><a href="#team" data-i18n="nav_team">About</a></li>
+          <li><a href="#properties" data-i18n="nav_properties">Properties</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <ul>
+          <li data-i18n="ci_address">Corniche Road, Abu Dhabi, UAE</li>
+          <li>info@legacyestate.ae</li>
+          <li>+44 7745 431063</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">&copy; 2026 Legacy Estate UAE. All rights reserved.</span>
+      <span data-i18n="footer_made">Abu Dhabi, United Arab Emirates</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+<div class="fab-col">
+  <button class="fab fab-chat" onclick="toggleChat()" title="Chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </button>
+  <a class="fab fab-wa" id="wa-link" href="https://wa.me/447745431063" target="_blank" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 004.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0012.04 2zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.61-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.38.26-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.41-.06.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.7 1.16 1.51 1.88 1.04.93 1.92 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.27.37-.22.62-.13.26.09 1.62.77 1.9.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+  </a>
+</div>
+
+<!-- ================= CHATBOT PANEL ================= -->
+<div class="chat-panel" id="chat-panel">
+  <div class="chat-head">
+    <b data-i18n="chat_title">Legacy Estate Assistant</b>
+    <button onclick="toggleChat()">&times;</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="msg bot" data-i18n="chat_greet">Hello! Ask me about buying, selling or renting property in the UAE.</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chat-text" placeholder="Type a message..." data-i18n-ph="chat_ph" onkeydown="if(event.key==='Enter'){sendChat();}">
+    <button onclick="sendChat()" data-i18n="chat_send">Send</button>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIG ================= */
+const FORM_WEBHOOK_URL = "https://automate.haroonai.com/webhook-test/19bc7748-formsubmit";
+const CHATBOT_WEBHOOK_URL = "https://automate.haroonai.com/webhook-test/5b253521-defc-45dchatbot";
+const WHATSAPP_NUMBER = "447745431063";
+
+/* ================= i18n ================= */
+const dict = {
+  en: {
+    top_location:"Abu Dhabi, United Arab Emirates", top_tag:"Trusted Real Estate Advisory Since Day One",
+    brand_sub:"UAE",
+    nav_home:"Home", nav_services:"Services", nav_properties:"Properties", nav_ai:"AI Finder", nav_team:"About", nav_contact:"Contact", nav_cta:"Get in Touch",
+    hero_eyebrow:"Abu Dhabi · Real Estate Advisory",
+    hero_title:'Find your place in <em>Abu Dhabi\'s</em> skyline',
+    hero_lead:"Legacy Estate UAE guides you through buying, selling and renting property across the Emirates — with local expertise and an AI-powered property finder to match you faster.",
+    hero_cta1:"Browse Properties", hero_cta2:"Speak to an Advisor",
+    stat1:"Years in UAE", stat2:"Properties Closed", stat3:"Emirates Covered",
+    tab_buy:"Buy", tab_rent:"Rent", tab_sell:"Sell",
+    f_location:"Location", f_type:"Property Type", f_price:"Price Range (AED)", f_bedrooms:"Bedrooms", f_size:"Size (sq ft)", f_search:"Search",
+    type_apartment:"Apartment", type_villa:"Villa", type_townhouse:"Townhouse", type_penthouse:"Penthouse", type_office:"Office", type_land:"Land / Plot",
+    price1:"500 AED – 500,000", price2:"500,000 – 1,000,000", price3:"1M – 2M", price4:"2M – 5M", price5:"5M – 10M", price6:"10M+",
+    bed_studio:"Studio", bed_5plus:"5+",
+    size1:"Under 800", size2:"800 – 1,500", size3:"1,500 – 3,000", size4:"3,000 – 6,000", size5:"6,000+",
+    serv_eyebrow:"What We Do", serv_title:"Every real estate service, under one roof",
+    serv_lead:"From your first search to the final handover, Legacy Estate UAE handles buying, selling, renting and managing property across all seven Emirates.",
+    s1_title:"Buy a Property", s1_desc:"Apartments, villas and off-plan units across Abu Dhabi and Dubai, matched to your budget and lifestyle.",
+    s2_title:"Sell Your Property", s2_desc:"Market valuation, professional listing and negotiation support to sell at the right price, faster.",
+    s3_title:"Rent a Home", s3_desc:"Short and long-term rentals with transparent contracts, from studios to family villas.",
+    s4_title:"List for Rent", s4_desc:"Get your unit in front of qualified tenants with professional photography and screening.",
+    s5_title:"Off-Plan & New Developments", s5_desc:"Early access to launches from Abu Dhabi's leading developers with flexible payment plans.",
+    s6_title:"AI Property Finder", s6_desc:"Describe what you're looking for in plain language and let our AI match you with listings instantly.",
+    prop_eyebrow:"Featured Listings", prop_title:"Handpicked properties in Abu Dhabi",
+    prop_lead:"A snapshot of current listings. Filter above or contact an advisor for the full portfolio, including off-market units.",
+    ai_eyebrow:"AI Property Finder", ai_title:"Tell us what you need. We'll find the match.",
+    ai_lead:"Describe your ideal home in your own words — budget, area, number of bedrooms, or lifestyle needs — and our assistant will suggest the closest matches from our current listings.",
+    ai_point1:"Understands natural language, not just filters", ai_point2:"Works in English and Arabic", ai_point3:"Connects you directly with a human advisor after",
+    ai_label:"Describe your ideal property", ai_placeholder:"e.g. 2 bedroom apartment in Al Reem Island, under 1.5M AED, close to a school",
+    chip1:"2BR in Saadiyat under 2M", chip2:"Villa for rent, Khalifa City", chip3:"Studio near Corniche",
+    ai_button:"Find Matches",
+    why_eyebrow:"Why Legacy Estate", why_title:"Built on local knowledge, run on modern tools",
+    w1_title:"Licensed & Regulated", w1_desc:"Fully licensed brokerage operating under UAE real estate regulations.",
+    w2_title:"Bilingual Service", w2_desc:"Every stage of the journey supported in Arabic and English.",
+    w3_title:"End-to-End Support", w3_desc:"From viewings to paperwork, mortgage referrals and handover.",
+    w4_title:"All 7 Emirates", w4_desc:"Coverage across Abu Dhabi, Dubai, Sharjah, Ajman, RAK, Fujairah and UAQ.",
+    team_eyebrow:"Our Advisors", team_title:"A team that knows every neighbourhood",
+    t1_name:"Omar Al Suwaidi", t1_role:"Senior Sales Advisor",
+    t2_name:"Lina Chen", t2_role:"Leasing Manager",
+    t3_name:"James Whitfield", t3_role:"Off-Plan Specialist",
+    t4_name:"Fatima Noor", t4_role:"Client Relations",
+    contact_eyebrow:"Get In Touch", contact_title:"Tell us what you're looking for",
+    contact_lead:"Share a few details and one of our advisors will respond with matching options.",
+    ci_title:"Legacy Estate UAE", ci_desc:"Our Abu Dhabi office is open Saturday to Thursday. Reach us directly by phone, WhatsApp or email, or use the form.",
+    ci_address:"Corniche Road, Abu Dhabi, United Arab Emirates", ci_hours:"Sat – Thu, 9:00 – 19:00",
+    fm_name:"Full Name", fm_name_ph:"Your full name", fm_email:"Email", fm_phone:"Phone Number",
+    fm_intent:"I want to", intent_buy:"Buy a property", intent_sell:"Sell a property", intent_rent:"Rent a property",
+    intent_list_rent:"List my property for rent", intent_list_sale:"List my property for sale", intent_invest:"Investment enquiry",
+    fm_budget:"Budget (AED)", fm_location:"Preferred Location", fm_timeline:"Whenever You Plan To Buy / Sell",
+    tl1:"Immediately", tl2:"Within 1–3 months", tl3:"Within 3–6 months", tl4:"Just researching",
+    fm_message:"Message", fm_message_ph:"Tell us more about what you're looking for...", fm_submit:"Submit Enquiry",
+    fm_note:"By submitting, you agree to be contacted by Legacy Estate UAE regarding your enquiry.",
+    footer_desc:"A licensed real estate advisory based in Abu Dhabi, serving buyers, sellers and tenants across the UAE.",
+    footer_services:"Services", footer_company:"Company", footer_contact:"Contact",
+    footer_copy:"© 2026 Legacy Estate UAE. All rights reserved.", footer_made:"Abu Dhabi, United Arab Emirates",
+    chat_title:"Legacy Estate Assistant", chat_greet:"Hello! Ask me about buying, selling or renting property in the UAE.",
+    chat_ph:"Type a message...", chat_send:"Send",
+    form_ok:"Thank you — your enquiry has been received. An advisor will contact you shortly.",
+    form_err:"Something went wrong sending your enquiry. Please try again or contact us on WhatsApp.",
+    chat_err:"Sorry, I couldn't reach the assistant right now. Please try again shortly.",
+  },
+  ar: {
+    top_location:"أبوظبي، الإمارات العربية المتحدة", top_tag:"استشارات عقارية موثوقة",
+    brand_sub:"الإمارات",
+    nav_home:"الرئيسية", nav_services:"الخدمات", nav_properties:"العقارات", nav_ai:"البحث الذكي", nav_team:"من نحن", nav_contact:"تواصل معنا", nav_cta:"تواصل معنا",
+    hero_eyebrow:"أبوظبي · استشارات عقارية",
+    hero_title:'اعثر على مكانك في أفق <em>أبوظبي</em>',
+    hero_lead:"تساعدك ليجاسي إستيت الإمارات في شراء وبيع وتأجير العقارات في جميع أنحاء الإمارات، بخبرة محلية وأداة بحث ذكية تساعدك على إيجاد العقار المناسب بشكل أسرع.",
+    hero_cta1:"تصفح العقارات", hero_cta2:"تحدث مع مستشار",
+    stat1:"سنوات في الإمارات", stat2:"عقارات تم إغلاقها", stat3:"إمارات مغطاة",
+    tab_buy:"شراء", tab_rent:"إيجار", tab_sell:"بيع",
+    f_location:"الموقع", f_type:"نوع العقار", f_price:"نطاق السعر (درهم)", f_bedrooms:"غرف النوم", f_size:"المساحة (قدم مربع)", f_search:"بحث",
+    type_apartment:"شقة", type_villa:"فيلا", type_townhouse:"تاون هاوس", type_penthouse:"بنتهاوس", type_office:"مكتب", type_land:"أرض",
+    price1:"٥٠٠ درهم – ٥٠٠,٠٠٠", price2:"٥٠٠,٠٠٠ – ١,٠٠٠,٠٠٠", price3:"١ مليون – ٢ مليون", price4:"٢ مليون – ٥ مليون", price5:"٥ مليون – ١٠ مليون", price6:"+١٠ مليون",
+    bed_studio:"استوديو", bed_5plus:"+٥",
+    size1:"أقل من ٨٠٠", size2:"٨٠٠ – ١,٥٠٠", size3:"١,٥٠٠ – ٣,٠٠٠", size4:"٣,٠٠٠ – ٦,٠٠٠", size5:"+٦,٠٠٠",
+    serv_eyebrow:"ماذا نقدم", serv_title:"جميع الخدمات العقارية تحت سقف واحد",
+    serv_lead:"من أول بحث حتى التسليم النهائي، تدير ليجاسي إستيت الإمارات عمليات الشراء والبيع والتأجير وإدارة العقارات في جميع الإمارات السبع.",
+    s1_title:"شراء عقار", s1_desc:"شقق وفلل ووحدات على الخارطة في أبوظبي ودبي، تناسب ميزانيتك وأسلوب حياتك.",
+    s2_title:"بيع عقارك", s2_desc:"تقييم للسوق وإدراج احترافي ودعم في التفاوض للبيع بالسعر المناسب وبشكل أسرع.",
+    s3_title:"استئجار منزل", s3_desc:"عقود إيجار قصيرة وطويلة الأجل وشفافة، من الاستوديوهات إلى الفلل العائلية.",
+    s4_title:"إدراج للإيجار", s4_desc:"اعرض وحدتك أمام مستأجرين مؤهلين بتصوير احترافي وفحص دقيق.",
+    s5_title:"مشاريع على الخارطة وجديدة", s5_desc:"وصول مبكر لإطلاقات كبرى المطورين في أبوظبي مع خطط سداد مرنة.",
+    s6_title:"البحث الذكي عن العقارات", s6_desc:"صف ما تبحث عنه بلغتك الطبيعية ودع الذكاء الاصطناعي يطابقك مع العقارات فورًا.",
+    prop_eyebrow:"عقارات مميزة", prop_title:"عقارات مختارة بعناية في أبوظبي",
+    prop_lead:"لمحة عن العقارات الحالية. صفِّ باستخدام الخيارات أعلاه أو تواصل مع مستشار للاطلاع على كامل المحفظة.",
+    ai_eyebrow:"البحث الذكي عن العقارات", ai_title:"أخبرنا بما تحتاجه، وسنجد لك الأنسب",
+    ai_lead:"صف منزلك المثالي بكلماتك الخاصة — الميزانية، المنطقة، عدد الغرف أو احتياجات نمط الحياة — وسيقترح مساعدنا أقرب النتائج من عقاراتنا الحالية.",
+    ai_point1:"يفهم اللغة الطبيعية وليس الفلاتر فقط", ai_point2:"يعمل باللغتين العربية والإنجليزية", ai_point3:"يصلك بمستشار حقيقي بعد ذلك",
+    ai_label:"صف عقارك المثالي", ai_placeholder:"مثال: شقة غرفتين في جزيرة الريم، أقل من ١.٥ مليون درهم، بالقرب من مدرسة",
+    chip1:"غرفتين في جزيرة السعديات أقل من مليونين", chip2:"فيلا للإيجار في مدينة خليفة", chip3:"استوديو قرب الكورنيش",
+    ai_button:"ابحث عن مطابقات",
+    why_eyebrow:"لماذا ليجاسي إستيت", why_title:"مبني على معرفة محلية وأدوات حديثة",
+    w1_title:"مرخّص ومنظّم", w1_desc:"وسيط عقاري مرخّص بالكامل يعمل وفق أنظمة العقارات في الإمارات.",
+    w2_title:"خدمة ثنائية اللغة", w2_desc:"دعم كامل بالعربية والإنجليزية في كل مرحلة من الرحلة.",
+    w3_title:"دعم شامل", w3_desc:"من المعاينات إلى الأوراق، والإحالات للتمويل، والتسليم.",
+    w4_title:"جميع الإمارات السبع", w4_desc:"تغطية تشمل أبوظبي ودبي والشارقة وعجمان ورأس الخيمة والفجيرة وأم القيوين.",
+    team_eyebrow:"مستشارونا", team_title:"فريق يعرف كل حي",
+    t1_name:"عمر السويدي", t1_role:"مستشار مبيعات أول",
+    t2_name:"لينا تشين", t2_role:"مديرة التأجير",
+    t3_name:"جيمس ويتفيلد", t3_role:"أخصائي مشاريع على الخارطة",
+    t4_name:"فاطمة نور", t4_role:"علاقات العملاء",
+    contact_eyebrow:"تواصل معنا", contact_title:"أخبرنا عمّا تبحث عنه",
+    contact_lead:"شارك بعض التفاصيل وسيتواصل معك أحد مستشارينا بخيارات مطابقة.",
+    ci_title:"ليجاسي إستيت الإمارات", ci_desc:"مكتبنا في أبوظبي مفتوح من السبت إلى الخميس. تواصل معنا مباشرة عبر الهاتف أو واتساب أو البريد الإلكتروني، أو استخدم النموذج.",
+    ci_address:"شارع الكورنيش، أبوظبي، الإمارات العربية المتحدة", ci_hours:"السبت – الخميس، ٩:٠٠ – ١٩:٠٠",
+    fm_name:"الاسم الكامل", fm_name_ph:"اسمك الكامل", fm_email:"البريد الإلكتروني", fm_phone:"رقم الهاتف",
+    fm_intent:"أرغب في", intent_buy:"شراء عقار", intent_sell:"بيع عقار", intent_rent:"استئجار عقار",
+    intent_list_rent:"إدراج عقاري للإيجار", intent_list_sale:"إدراج عقاري للبيع", intent_invest:"استفسار استثماري",
+    fm_budget:"الميزانية (درهم)", fm_location:"الموقع المفضّل", fm_timeline:"متى تخطط للشراء / البيع",
+    tl1:"فورًا", tl2:"خلال ١–٣ أشهر", tl3:"خلال ٣–٦ أشهر", tl4:"أبحث فقط",
+    fm_message:"الرسالة", fm_message_ph:"أخبرنا المزيد عمّا تبحث عنه...", fm_submit:"إرسال الاستفسار",
+    fm_note:"بالإرسال، فإنك توافق على أن تتواصل معك ليجاسي إستيت الإمارات بخصوص استفسارك.",
+    footer_desc:"وكالة عقارية مرخّصة مقرها أبوظبي، تخدم المشترين والبائعين والمستأجرين في جميع أنحاء الإمارات.",
+    footer_services:"الخدمات", footer_company:"الشركة", footer_contact:"التواصل",
+    footer_copy:"© 2026 ليجاسي إستيت الإمارات. جميع الحقوق محفوظة.", footer_made:"أبوظبي، الإمارات العربية المتحدة",
+    chat_title:"مساعد ليجاسي إستيت", chat_greet:"مرحبًا! اسألني عن شراء أو بيع أو تأجير العقارات في الإمارات.",
+    chat_ph:"اكتب رسالة...", chat_send:"إرسال",
+    form_ok:"شكرًا لك — تم استلام استفسارك. سيتواصل معك أحد المستشارين قريبًا.",
+    form_err:"حدث خطأ أثناء إرسال استفسارك. الرجاء المحاولة مرة أخرى أو التواصل معنا عبر واتساب.",
+    chat_err:"عذرًا، تعذّر الوصول إلى المساعد الآن. حاول مرة أخرى بعد قليل.",
+  }
+};
+
+let currentLang = 'en';
+
+function applyLang(lang){
+  const d = dict[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(d[key] !== undefined){ el.innerHTML = d[key]; }
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-ph');
+    if(d[key] !== undefined){ el.setAttribute('placeholder', d[key]); }
+  });
+}
+
+function setLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+  applyLang(lang);
+  populateLocations();
+  populateBudgets();
+  renderProperties();
+}
+
+/* ================= LOCATIONS (all 7 Emirates) ================= */
+const locations = {
+  en: [
+    "Abu Dhabi – Corniche Road","Abu Dhabi – Al Reem Island","Abu Dhabi – Saadiyat Island","Abu Dhabi – Yas Island",
+    "Abu Dhabi – Al Raha Beach","Abu Dhabi – Khalifa City","Abu Dhabi – Al Reef","Abu Dhabi – Al Bateen","Abu Dhabi – Al Maryah Island",
+    "Dubai – Downtown Dubai","Dubai – Dubai Marina","Dubai – Palm Jumeirah","Dubai – Business Bay","Dubai – JVC","Dubai – Dubai Hills Estate",
+    "Sharjah – Al Majaz","Sharjah – Al Nahda","Sharjah – Muwaileh",
+    "Ajman – Al Nuaimiya","Ajman – Corniche Ajman",
+    "Ras Al Khaimah – Al Marjan Island","Ras Al Khaimah – Mina Al Arab",
+    "Fujairah – Fujairah City",
+    "Umm Al Quwain – UAQ Marina"
+  ],
+  ar: [
+    "أبوظبي – شارع الكورنيش","أبوظبي – جزيرة الريم","أبوظبي – جزيرة السعديات","أبوظبي – جزيرة ياس",
+    "أبوظبي – شاطئ الراحة","أبوظبي – مدينة خليفة","أبوظبي – الريف","أبوظبي – البطين","أبوظبي – جزيرة المارية",
+    "دبي – وسط مدينة دبي","دبي – مرسى دبي","دبي – نخلة جميرا","دبي – الخليج التجاري","دبي – جي في سي","دبي – دبي هيلز استيت",
+    "الشارقة – المجاز","الشارقة – النهدة","الشارقة – مويلح",
+    "عجمان – النعيمية","عجمان – كورنيش عجمان",
+    "رأس الخيمة – جزيرة المرجان","رأس الخيمة – ميناء العرب",
+    "الفجيرة – مدينة الفجيرة",
+    "أم القيوين – مارينا أم القيوين"
+  ]
+};
+
+function populateLocations(){
+  const arr = locations[currentLang];
+  const opts = arr.map(l=>`<option>${l}</option>`).join('');
+  document.getElementById('s-location').innerHTML = opts;
+  document.getElementById('location-select').innerHTML = opts;
+}
+
+const budgets = {
+  en: ["500 – 500,000 AED","500,000 – 1,000,000 AED","1M – 2M AED","2M – 5M AED","5M – 10M AED","10M+ AED"],
+  ar: ["٥٠٠ – ٥٠٠,٠٠٠ درهم","٥٠٠,٠٠٠ – ١,٠٠٠,٠٠٠ درهم","١ – ٢ مليون درهم","٢ – ٥ مليون درهم","٥ – ١٠ مليون درهم","+١٠ مليون درهم"]
+};
+function populateBudgets(){
+  document.getElementById('budget-select').innerHTML = budgets[currentLang].map(b=>`<option>${b}</option>`).join('');
+}
+
+/* ================= COUNTRY CODES ================= */
+const countryCodes = [
+  ["🇦🇪 United Arab Emirates","+971"],["🇸🇦 Saudi Arabia","+966"],["🇶🇦 Qatar","+974"],["🇰🇼 Kuwait","+965"],
+  ["🇧🇭 Bahrain","+973"],["🇴🇲 Oman","+968"],["🇪🇬 Egypt","+20"],["🇯🇴 Jordan","+962"],["🇱🇧 Lebanon","+961"],
+  ["🇮🇶 Iraq","+964"],["🇸🇾 Syria","+963"],["🇾🇪 Yemen","+967"],["🇵🇸 Palestine","+970"],["🇲🇦 Morocco","+212"],
+  ["🇩🇿 Algeria","+213"],["🇹🇳 Tunisia","+216"],["🇱🇾 Libya","+218"],["🇸🇩 Sudan","+249"],
+  ["🇬🇧 United Kingdom","+44"],["🇺🇸 United States","+1"],["🇨🇦 Canada","+1"],["🇫🇷 France","+33"],["🇩🇪 Germany","+49"],
+  ["🇮🇹 Italy","+39"],["🇪🇸 Spain","+34"],["🇵🇹 Portugal","+351"],["🇳🇱 Netherlands","+31"],["🇧🇪 Belgium","+32"],
+  ["🇨🇭 Switzerland","+41"],["🇦🇹 Austria","+43"],["🇸🇪 Sweden","+46"],["🇳🇴 Norway","+47"],["🇩🇰 Denmark","+45"],
+  ["🇫🇮 Finland","+358"],["🇮🇪 Ireland","+353"],["🇵🇱 Poland","+48"],["🇬🇷 Greece","+30"],["🇷🇺 Russia","+7"],
+  ["🇺🇦 Ukraine","+380"],["🇹🇷 Turkey","+90"],["🇮🇳 India","+91"],["🇵🇰 Pakistan","+92"],["🇧🇩 Bangladesh","+880"],
+  ["🇱🇰 Sri Lanka","+94"],["🇳🇵 Nepal","+977"],["🇵🇭 Philippines","+63"],["🇮🇩 Indonesia","+62"],["🇲🇾 Malaysia","+60"],
+  ["🇸🇬 Singapore","+65"],["🇹🇭 Thailand","+66"],["🇻🇳 Vietnam","+84"],["🇨🇳 China","+86"],["🇭🇰 Hong Kong","+852"],
+  ["🇯🇵 Japan","+81"],["🇰🇷 South Korea","+82"],["🇦🇺 Australia","+61"],["🇳🇿 New Zealand","+64"],
+  ["🇿🇦 South Africa","+27"],["🇳🇬 Nigeria","+234"],["🇰🇪 Kenya","+254"],["🇬🇭 Ghana","+233"],["🇪🇹 Ethiopia","+251"],
+  ["🇧🇷 Brazil","+55"],["🇲🇽 Mexico","+52"],["🇦🇷 Argentina","+54"],["🇨🇱 Chile","+56"],["🇨🇴 Colombia","+57"],
+  ["🇮🇱 Israel","+972"],["🇮🇷 Iran","+98"],["🇦🇫 Afghanistan","+93"],["🇦🇿 Azerbaijan","+994"],["🇬🇪 Georgia","+995"],
+  ["🇰🇿 Kazakhstan","+7"],["🇺🇿 Uzbekistan","+998"],["🇨🇿 Czech Republic","+420"],["🇭🇺 Hungary","+36"],
+  ["🇷🇴 Romania","+40"],["🇧🇬 Bulgaria","+359"],["🇭🇷 Croatia","+385"],["🇷🇸 Serbia","+381"]
+];
+function populateCountryCodes(){
+  const sel = document.getElementById('country-code');
+  sel.innerHTML = countryCodes.map(([name,code])=>`<option value="${code}">${name} ${code}</option>`).join('');
+  // default to UAE
+  sel.value = "+971";
+}
+
+/* ================= PROPERTIES ================= */
+const propertiesData = {
+  en: [
+    {tag:"For Sale", price:"AED 1,850,000", title:"2BR Apartment, Al Reem Island", loc:"Al Reem Island, Abu Dhabi", beds:2, baths:2, size:"1,240 sqft", amen:["Near School","Metro Access","Sea View"]},
+    {tag:"For Rent", price:"AED 145,000 / yr", title:"3BR Villa, Khalifa City", loc:"Khalifa City, Abu Dhabi", beds:3, baths:4, size:"3,600 sqft", amen:["Near Hospital","Shopping Mall","Garden"]},
+    {tag:"For Sale", price:"AED 4,200,000", title:"4BR Villa, Saadiyat Island", loc:"Saadiyat Island, Abu Dhabi", beds:4, baths:5, size:"5,100 sqft", amen:["Beachfront","Near School","Golf Course"]},
+    {tag:"For Rent", price:"AED 85,000 / yr", title:"Studio, Corniche Road", loc:"Corniche Road, Abu Dhabi", beds:0, baths:1, size:"520 sqft", amen:["Sea View","Public Transport","Gym"]},
+    {tag:"For Sale", price:"AED 2,650,000", title:"3BR Townhouse, Al Raha Beach", loc:"Al Raha Beach, Abu Dhabi", beds:3, baths:3, size:"2,200 sqft", amen:["Near Hospital","Marina Access","Shopping"]},
+    {tag:"Off-Plan", price:"From AED 950,000", title:"1BR Apartment, Yas Island", loc:"Yas Island, Abu Dhabi", beds:1, baths:1, size:"780 sqft", amen:["Theme Parks","Near School","Waterfront"]}
+  ],
+  ar: [
+    {tag:"للبيع", price:"١,٨٥٠,٠٠٠ درهم", title:"شقة غرفتين، جزيرة الريم", loc:"جزيرة الريم، أبوظبي", beds:2, baths:2, size:"١,٢٤٠ قدم مربع", amen:["قرب مدرسة","وصول للمترو","إطلالة بحرية"]},
+    {tag:"للإيجار", price:"١٤٥,٠٠٠ درهم / سنويًا", title:"فيلا ٣ غرف، مدينة خليفة", loc:"مدينة خليفة، أبوظبي", beds:3, baths:4, size:"٣,٦٠٠ قدم مربع", amen:["قرب مستشفى","مركز تسوق","حديقة"]},
+    {tag:"للبيع", price:"٤,٢٠٠,٠٠٠ درهم", title:"فيلا ٤ غرف، جزيرة السعديات", loc:"جزيرة السعديات، أبوظبي", beds:4, baths:5, size:"٥,١٠٠ قدم مربع", amen:["إطلالة على الشاطئ","قرب مدرسة","ملعب غولف"]},
+    {tag:"للإيجار", price:"٨٥,٠٠٠ درهم / سنويًا", title:"استوديو، شارع الكورنيش", loc:"شارع الكورنيش، أبوظبي", beds:0, baths:1, size:"٥٢٠ قدم مربع", amen:["إطلالة بحرية","مواصلات عامة","نادي رياضي"]},
+    {tag:"للبيع", price:"٢,٦٥٠,٠٠٠ درهم", title:"تاون هاوس ٣ غرف، شاطئ الراحة", loc:"شاطئ الراحة، أبوظبي", beds:3, baths:3, size:"٢,٢٠٠ قدم مربع", amen:["قرب مستشفى","وصول للمارينا","تسوق"]},
+    {tag:"على الخارطة", price:"ابتداءً من ٩٥٠,٠٠٠ درهم", title:"شقة غرفة واحدة، جزيرة ياس", loc:"جزيرة ياس، أبوظبي", beds:1, baths:1, size:"٧٨٠ قدم مربع", amen:["مدن ملاهي","قرب مدرسة","واجهة مائية"]}
+  ]
+};
+
+function renderProperties(){
+  const grid = document.getElementById('prop-grid');
+  const list = propertiesData[currentLang];
+  const bedLabel = currentLang==='ar' ? 'غرف' : 'bd';
+  const bathLabel = currentLang==='ar' ? 'حمام' : 'ba';
+  grid.innerHTML = list.map((p,i)=>`
+    <div class="prop-card">
+      <div class="prop-media" style="background:linear-gradient(135deg, #0E1B2C, #123C3C);">
+        <span class="prop-tag">${p.tag}</span>
+        <span class="prop-price">${p.price}</span>
+      </div>
+      <div class="prop-body">
+        <h3>${p.title}</h3>
+        <div class="prop-loc">📍 ${p.loc}</div>
+        <div class="prop-meta">
+          <span>${p.beds} ${bedLabel}</span>
+          <span>${p.baths} ${bathLabel}</span>
+          <span>${p.size}</span>
+        </div>
+        <div class="prop-amen">${p.amen.map(a=>`<span>${a}</span>`).join('')}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ================= SEARCH TABS ================= */
+function setTab(tab, btn){
+  document.querySelectorAll('.search-tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function runSearch(){
+  document.getElementById('properties').scrollIntoView({behavior:'smooth'});
+}
+
+/* ================= AI FINDER ================= */
+function fillAi(el){
+  document.getElementById('ai-input').value = el.textContent;
+}
+async function askAi(){
+  const input = document.getElementById('ai-input').value.trim();
+  const resultBox = document.getElementById('ai-result');
+  if(!input) return;
+  resultBox.style.display = 'block';
+  resultBox.textContent = currentLang==='ar' ? "جارٍ البحث عن أفضل تطابق..." : "Searching for the best matches...";
+  try{
+    const res = await fetch(CHATBOT_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ type:'ai_property_finder', message: input, lang: currentLang })
+    });
+    let text;
+    try{
+      const data = await res.json();
+      text = data.reply || data.output || data.message || JSON.stringify(data);
+    }catch(e){
+      text = await res.text();
+    }
+    resultBox.textContent = text || (currentLang==='ar' ? "تم الإرسال. سيتواصل معك مستشار قريبًا." : "Request sent. An advisor will follow up shortly.");
+  }catch(err){
+    resultBox.textContent = dict[currentLang].chat_err;
+  }
+}
+
+/* ================= CHATBOT ================= */
+function toggleChat(){
+  document.getElementById('chat-panel').classList.toggle('open');
+}
+async function sendChat(){
+  const input = document.getElementById('chat-text');
+  const body = document.getElementById('chat-body');
+  const msg = input.value.trim();
+  if(!msg) return;
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = msg;
+  body.appendChild(userMsg);
+  input.value = '';
+  body.scrollTop = body.scrollHeight;
+
+  const loadingMsg = document.createElement('div');
+  loadingMsg.className = 'msg bot';
+  loadingMsg.textContent = currentLang==='ar' ? "..." : "...";
+  body.appendChild(loadingMsg);
+  body.scrollTop = body.scrollHeight;
+
+  try{
+    const res = await fetch(CHATBOT_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ message: msg, lang: currentLang })
+    });
+    let text;
+    try{
+      const data = await res.json();
+      text = data.reply || data.output || data.message || JSON.stringify(data);
+    }catch(e){
+      text = await res.text();
+    }
+    loadingMsg.textContent = text || dict[currentLang].chat_err;
+  }catch(err){
+    loadingMsg.textContent = dict[currentLang].chat_err;
+  }
+}
+
+/* ================= LEAD FORM ================= */
+document.getElementById('lead-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const statusBox = document.getElementById('form-status');
+  const fd = new FormData(form);
+  const intents = fd.getAll('intent');
+  const payload = {
+    name: fd.get('name'),
+    email: fd.get('email'),
+    country_code: fd.get('country_code'),
+    phone: fd.get('phone'),
+    full_phone: (fd.get('country_code')||'') + ' ' + (fd.get('phone')||''),
+    intent: intents,
+    budget: fd.get('budget'),
+    preferred_location: fd.get('location'),
+    timeline: fd.get('timeline'),
+    message: fd.get('message'),
+    language: currentLang,
+    source: "legacyestate.ae website form"
+  };
+  statusBox.className = '';
+  statusBox.style.display = 'none';
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+
+  try{
+    const res = await fetch(FORM_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    statusBox.className = 'ok';
+    statusBox.textContent = dict[currentLang].form_ok;
+    form.reset();
+    populateCountryCodes();
+  }catch(err){
+    statusBox.className = 'err';
+    statusBox.textContent = dict[currentLang].form_err;
+  }finally{
+    submitBtn.disabled = false;
+  }
+});
+
+/* ================= INIT ================= */
+populateCountryCodes();
+populateLocations();
+populateBudgets();
+renderProperties();
+applyLang('en');
+</script>
+</body>
+</html>

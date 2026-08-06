@@ -44,12 +44,8 @@ export default async function handler(req, res) {
     }
 
     // 2) Pull every event on the shared calendar for that day (clinic hours 10:00–22:00).
-    // The clinic runs on Kyrgyzstan time (UTC+6). Vercel's server clock is UTC, so this
-    // MUST be anchored explicitly — otherwise "10:00" gets read as 10:00 UTC (= 4:00 PM
-    // clinic time) and never lines up with the calendar's real busy times.
-    const CLINIC_UTC_OFFSET = '+06:00';
-    const timeMin = new Date(`${date}T10:00:00${CLINIC_UTC_OFFSET}`).toISOString();
-    const timeMax = new Date(`${date}T22:00:00${CLINIC_UTC_OFFSET}`).toISOString();
+    const timeMin = new Date(`${date}T10:00:00`).toISOString();
+    const timeMax = new Date(`${date}T22:00:00`).toISOString();
     const params = new URLSearchParams({
       timeMin, timeMax,
       singleEvents: 'true',
@@ -79,7 +75,7 @@ export default async function handler(req, res) {
     for (let m = 10 * 60; m + duration <= 22 * 60; m += duration) {
       const hh = String(Math.floor(m / 60)).padStart(2, '0');
       const mm = String(m % 60).padStart(2, '0');
-      const slotStart = new Date(`${date}T${hh}:${mm}:00${CLINIC_UTC_OFFSET}`);
+      const slotStart = new Date(`${date}T${hh}:${mm}:00`);
       const slotEnd = new Date(slotStart.getTime() + duration * 60000);
       const overlaps = doctorEvents.some(ev => {
         const evStart = new Date(ev.start.dateTime || ev.start.date);
